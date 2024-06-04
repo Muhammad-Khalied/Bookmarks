@@ -1,0 +1,156 @@
+@font-face {
+  font-family: "Pacifico";
+  src: url(../webfonts/Pacifico-Regular.ttf) format("truetype");
+}
+
+@font-face {
+  font-family: "Righteous";
+  src: url(../webfonts/Righteous-Regular.ttf) format("truetype");
+}
+
+@font-face {
+  font-family: 'Bree Serif';
+  src: url(../webfonts/BreeSerif-Regular.ttf) format("truetype");
+}
+
+@font-face {
+  font-family: 'PT Sans Caption';
+  src: url(../webfonts/PTSansCaption-Bold.ttf) format("truetype");
+}
+
+h1 {
+  font-family: "Pacifico";
+  font-size: 3rem;
+  z-index: 0;
+}
+
+h3 {
+  font-family: "Righteous";
+  font-size: 1.7rem;
+  z-index: 0;
+  margin: 0;
+  background-image: linear-gradient(to right, #3ca55c, #b5ac49);
+  background-clip: text;
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+}
+
+.icon-e {
+  color: #b5ac49;
+}
+
+.icon-s {
+  color: #3ca55c;
+}
+
+::selection {
+  background-color: #fec260;
+}
+
+.bookmark {
+  &::before {
+    content: "";
+    position: absolute;
+    bottom: 0;
+    width: 100%;
+    height: 30%;
+    background-color: #fec260;
+    z-index: -1;
+    transition: all 0.3s;
+  }
+  &:hover {
+    &::before {
+      height: 65%;
+    }
+  }
+}
+
+.form {
+  border-width: 2px 0px 2px 0px;
+  border-style: dotted;
+  border-color: black;
+}
+
+.btn-submit {
+  --bs-btn-color: #fff;
+  --bs-btn-bg: #d1512d;
+  --bs-btn-border-color: #d1512d;
+  --bs-btn-hover-color: #fff;
+  --bs-btn-hover-bg: #bb4120;
+  --bs-btn-hover-border-color: #a03315;
+}
+
+.btn-check:checked + .btn,
+.btn.active,
+.btn.show,
+.btn:first-child:active,
+:not(.btn-check) + .btn:active {
+  --bs-btn-active-bg: #a03315;
+  --bs-btn-active-border-color: #a03315;
+}
+
+
+table{
+  font-family: 'PT Sans Caption';
+}
+
+
+.circles span {
+  display: block;
+  width: 20px;
+  height: 20px;
+}
+
+
+
+.circles span:nth-child(1) {
+  background-color: #f15f5d;
+}
+
+.circles span:nth-child(2) {
+  background-color: #febe2e;
+}
+
+
+.circles span:nth-child(3) {
+  background-color: #4db748;
+}
+
+
+.modal-content + p{
+  font-family: 'Bree Serif';
+}
+
+.modal-content {
+  .text-danger {
+    
+    --bs-danger-rgb: 187, 65, 32;
+}
+}
+
+.btn-visit {
+  --bs-btn-color: #fff;
+  --bs-btn-bg: #9eb23b;
+  --bs-btn-border-color: #9eb23b;
+  --bs-btn-hover-color: #fff;
+  --bs-btn-hover-bg: #8a9e23;
+  --bs-btn-hover-border-color: #6e8018;
+}
+
+
+
+.btn-delete {
+  --bs-btn-color: #fff;
+  --bs-btn-bg: #eb1d36;
+  --bs-btn-border-color: #eb1d36;
+  --bs-btn-hover-color: #fff;
+  --bs-btn-hover-bg: #d30820;
+  --bs-btn-hover-border-color: #ba081d;
+}
+
+
+.btn-check:checked + .btn, .btn.active, .btn.show, .btn:first-child:active, :not(.btn-check) + .btn:active {
+  --bs-btn-active-bg: transparent;
+  color: black;
+  --bs-btn-active-border-color: black;
+}

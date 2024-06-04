@@ -1,0 +1,129 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+    <link rel="stylesheet" href="css/all.min.css" />
+    <link rel="stylesheet" href="css/bootstrap.min.css" />
+    <link rel="stylesheet" href="css/main.css" />
+  </head>
+  <body>
+    <section class="pt-2 vh-100 bg-body-secondary">
+      <div class="container">
+        <div class="d-flex justify-content-center align-items-center">
+          <h1 class="bookmark position-relative my-5">Bookmarker</h1>
+        </div>
+        <div class="form py-4">
+          <div class="d-flex align-items-center justify-content-center gap-2">
+            <i class="fas fa-bookmark fs-4 icon-s"></i>
+            <h3 class="text-center">Bookmark your favorite sites</h3>
+            <i class="fas fa-bookmark fs-4 icon-e"></i>
+          </div>
+          <form>
+            <div class="mb-3">
+              <label for="inputName" class="form-label fw-bold"
+                ><i class="fas fa-book-bookmark me-2"></i> Site Name</label
+              >
+              <input
+                oninput="checkInputs(this)"
+                type="text"
+                class="form-control"
+                id="inputName"
+                placeholder="Bookmark Name"
+              />
+            </div>
+            <div class="mb-3">
+              <label for="inputURL" class="form-label fw-bold"
+                ><i class="fas fa-link me-2"></i> Site URL</label
+              >
+              <input
+                oninput="checkInputs(this)"
+                type="text"
+                class="form-control"
+                id="inputURL"
+                placeholder="Website URL"
+              />
+            </div>
+            <div class="d-flex justify-content-center">
+              <button
+                type="button"
+                class="btn btn-primary btn-submit my-2 px-5"
+                data-bs-toggle="modal"
+                data-bs-target="#modal"
+                id="submitBtn"
+              >
+                <!-- 
+              onclick="addBookmark(this)"
+              data-bs-toggle="modal"
+              data-bs-target="#modal"
+-->
+                Submit
+              </button>
+            </div>
+          </form>
+        </div>
+
+        <table class="table text-center bg-light mt-4">
+          <thead class="">
+            <tr>
+              <th class="fw-bold fs-6">Index</th>
+              <th class="fw-bold fs-6">Website Name</th>
+              <th class="fw-bold fs-6">Visit</th>
+              <th class="fw-bold fs-6">Delete</th>
+            </tr>
+          </thead>
+
+          <tbody id="tableContent">
+            
+          </tbody>
+        </table>
+      </div>
+    </section>
+    x`
+    <!-- Modal -->
+    <div
+      class="modal fade"
+      id="modal"
+      tabindex="-1"
+      aria-labelledby="modalLabel"
+      aria-hidden="true"
+    >
+      <div class="modal-dialog modal-dialog-centered">
+        <div class="modal-content p-3">
+          <div class="modal-header border-0">
+            <div class="circles d-flex">
+              <span class="rounded-circle me-2"></span>
+              <span class="rounded-circle me-2"></span>
+              <span class="rounded-circle me-2"></span>
+            </div>
+            <button
+              type="button"
+              class="btn-close"
+              data-bs-dismiss="modal"
+              aria-label="Close"
+            ></button>
+          </div>
+          <div class="modal-body">
+            <p class="m-0 pb-2 h5">
+              Site Name or Url is not valid, Please follow the rules below :
+            </p>
+            <ol class="rules list-unstyled m-0 mt-3">
+              <li class="fs-5 text-black">
+                <i class="fa-regular fa-circle-right fs-5 p-2 text-danger"></i
+                >Site name must contain at least 3 characters
+              </li>
+              <li class="fs-5 text-black">
+                <i class="fa-regular fa-circle-right fs-5 p-2 text-danger"></i
+                >Site URL must be a valid one
+              </li>
+            </ol>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <script src="js/bootstrap.bundle.min.js"></script>
+    <script src="js/script.js"></script>
+  </body>
+</html>
